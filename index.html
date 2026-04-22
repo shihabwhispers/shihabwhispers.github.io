@@ -4,109 +4,335 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shihab Whispers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Tiro+Bangla:ital@0;1&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- ══ HEADER ══ -->
   <header class="header">
-  <ul class="nav">
-    <li><a href="#about">HOME</a></li>
-    <li><a href="#articles">ARTICLES</a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61577734264897">POTROKUNJO</a></li>
-    <li><a href="#">ARYNNAK</a></li>
-    <li><a href="mailto:declined2stay2flyweirdo@gmail.com">MAIL</a></li>
-  </ul>
-  <div class="logo">
-    <img src="logo.png" alt="Shihab Islam">
-  </div>
-</header>
+    <ul class="nav">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61577734264897" target="_blank">POTROKUNJO</a></li>
+      <li><a href="mailto:declined2stay2flyweirdo@gmail.com">MAIL</a></li>
+    </ul>
+    <div class="logo">
+      <img src="logo.png" alt="Shihab Islam">
+    </div>
+  </header>
 
-
-  <!-- Hero Section -->
+  <!-- ══ HERO ══ -->
   <section class="hero">
-    <video src="hero.mp4" alt="The Old Thinking" class="hero-video" autoplay muted></video>
+    <video src="hero_v2.mp4" class="hero-video" autoplay muted loop playsinline></video>
   </section>
 
-  <!-- About Section -->
-   <div class="container">
-    <div class="ProfilePhotoWrapper"> 
-      <div class="ProfilePhoto"> 
-        <img src="Profile.jpg" alt="Shihab Islam"> </div> 
-        <p class="picname">
-          SHIHAB ISLAM<br>Adventurer of Life
-          </p> 
+  <!-- ══ WRITINGS (Accordion) ══ -->
+  <section class="writings-section">
+    <h2 class="writings-heading">WRITINGS</h2>
+
+    <div class="wp-tabs">
+      <button class="wp-tab active" onclick="showTab('golpo', this)">Golpo Olpo</button>
+      <button class="wp-tab" onclick="showTab('iccha', this)">Ichha Nodi</button>
+      <button class="wp-tab" onclick="showTab('mon', this)">Mon Ja Chay</button>
+    </div>
+
+    <div class="wp-content">
+
+      <!-- ═══ GolpoOlpo ═══ -->
+      <div class="wp-panel active" id="panel-golpo">
+        <p class="wp-section-desc">গল্পের ছোট্ট ভাণ্ডার — prose, fragments, fiction.</p>
+
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>ক্রাইসিস</h3>
+            <span class="wp-meta">গদ্য</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <p>হিউম্যান সিভিলাইজেশন তার সবচেয়ে বড় ক্রাইসিস মোমেন্ট পার করতেসে। আজকের জামানায় একটা মানুস কোন কিছু করেই শান্তি পাচ্ছে না। সবাই একটা অদ্ভুত নেশায় বুঁদ হয়ে আছে।</p>
+              <p>ফ্রেন্ডস, ফ্যামিলি, ফেইথ সবকিছু মূল্যহীন বানায় ফেলসে। কোন কিছুর সাথে জুড়ে থাকতে পারেনা— কানেকশন হারায় ফ্যালে।</p>
+              <p>যাদের জন্য টাকা কামায় তাদের সাথে সময় কাটাইতে ভুলে যায়; যারা পড়াশুনা করে, তারাও হুদাই পড়তেসে— লাইফ বলতে কিচ্ছু নাই! এগুলা সমস্যা এজন্য কারণ আমরা এগুলারে সমস্যা বলি। সারাদিন কাজের কাজ কিছু করিনা; আবার না করাটাকে নিয়ে আফসোস করতে থাকি!</p>
+              <p>যেটা করতেছি এটা নিয়ে হ্যাপি থাকলে সমস্যা ছিল না; কিন্তু, আমরা যা করি সেটা নিয়ে আসলে কেউ হ্যাপি না — এই জন্যই সমস্যা!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✦ NEW STORY TEMPLATE — uncomment and fill in ✦
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>TITLE</h3>
+            <span class="wp-meta">গদ্য · DATE</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <p>PARAGRAPH ONE</p>
+              <p>PARAGRAPH TWO</p>
+            </div>
+          </div>
+        </div>
+        -->
       </div>
+
+      <!-- ═══ IchhaNodi ═══ -->
+      <div class="wp-panel" id="panel-iccha">
+        <p class="wp-section-desc">কবিতার নদী — verses in Bengali and English.</p>
+
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>ভাগাড়</h3>
+            <span class="wp-meta">কবিতা</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <div class="poem">দু'মুঠো সময় বালুর মতো আঙ্গুল ফসকে গড়িয়ে পড়ে,
+ধুলো জমার মতো করে জমা পড়তে থাকে,
+তৈইয়ার হয় উইপোকার ঢিবির মতো— মহাকাল।
+
+আর সেই নিখিল মহাকালে
+অবিরত সমুদ্রের মাঝে ভেসে থাকা আবর্জনার মতো ভেসে থাকে অ্যাকটা গ্রহ,
+ভেসে থাকে লোভাতুর চোখ নিয়ে জন্মানো,
+কামের বীর্যে পুষ্ট একেকটা বৃহন্নলা দেহের স্যাপিয়েন্স,
+ভেসে থাকে তাদের ভাগাড়!
+
+খোদার আরশ আজ ভেঙ্গে পড়ুক,
+বজ্রের ফিনকি দিয়ে
+গুঁড়ো গুঁড়ো করে যাক যত মোল্লা আর ঈমানদার!
+
+সব ব্রাহ্মণ আজ চিতার গ্রাসে কালো ধোঁয়া হয়ে উঠুক
+উঠুক তীব্র দুর্গন্ধ,
+আজ হাঁড়ের ভেতর পর্যন্ত কটকট শব্দ কানে বাজুক!
+
+স্যালভেশনে আত্মহারা নরগুলোকে শূলে চড়ানো হোক
+ক্রূশবিদ্ধ যিশুর ক্রূশ রক্তের ক্ষুধায়
+মেতে উঠুক, মেতে উঠুক আবার!
+
+অ্যামিনো অ্যাসিডের চাহিদা মেটাতে
+ভক্ষিত হোক নাস্তিকের একেকটা দেহ-প্রাণ
+ক্যানিবালিজমের সুঘ্রাণে, ঝলসানো মাংসে জেগে উঠুক ইউটোপিয়া!
+
+সূর্য নেমে আসুক মাথার আধ হাত কাছে;
+ফুটতে থাকুক সুন্দর চিন্তা করতে থাকা মগজ,
+ভাবনার মতো গলে পড়ুক বুদ্ধিজীবীদের
+আড়াই পাউন্ডের সেরিব্রাম!
+
+অতঃপর, অতঃপর, অতঃপর...
+ভাগাড়টা পরিণত হবে বেহেশতে;
+হাসতে শিখবে—
+কাটা গরুর মতো শ্বাসনালি নিয়ে ফোঁস-ফোঁস আওয়াজ
+করতে থাকা ইরা নামের মেয়েটা;
+ব্যান্ডেজ জড়ানো, ক্লান্ত চোখে সাদা মখমলে চোখ বুজে থাকা আছিয়া নামের বোনটা;
+খবরের ওপর খবর গাদা হবার কারণে
+মিডিয়ার কোণায় হারিয়ে যাওয়া
+তাবাচ্ছুম নামের শিশুটা...
+আর?
+আরো হাসতে শিখবে হাজারটা প্রাণ,
+টুংটাং-খিলখিল শব্দে বাজা শিখবে ভায়োলিনগুলা!
+
+অতঃপর
+ধূলোয় মিশে যাবে আমাদের মতো অঘোরি চিন্তার সাধক,
+ধ্বংস হয়ে যাবে মোনাফেক স্যাপিয়েন্স,
+আর উষ্ণ রক্ত বইবে ফেরেশতাকূলে;
+নাজিল হবে, কচুপাতা থেকে গড়িয়ে পড়া জলকণার মতো
+ছিটকে পড়বে খোদার কিয়ামত...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>আমার একজন প্রেমিকা চাই</h3>
+            <span class="wp-meta">কবিতা</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <div class="poem">রাদার মতো আমার একজন চাই
+সে আমার প্রেমিকা হবে
+মুক্ত বিহঙ্গ ও জিপসি রাদার চরিত্রে এসে অভিন্ন-
+আমার সেই রাদা চাই!
+
+সবুজের গালিচা গায়ে চাপিয়ে সে দাপিয়ে বেড়াবে
+তার অসহ্য রূপে জ্বলে যাবে অশুচি
+আমার সেই রাদা চাই
+
+রাদা, তুমি হবে স্বাধীনচেতা; তুমি বলবে-
+হাঁটু গেঁড়ে হাত ছুঁয়ে চুম্বন কর
+তোমাকে আলিঙ্গন করার চেয়েও দামি হবে তোমার চেতনা জড়িয়ে ধরা
+
+জানো, আমিও জোবারের মতো
+দুরন্ত নির্ভীক ঘোড়সওয়ার লেইকো জোবার
+তোমাকে পাবার তীব্র লোভে ভায়োলিন বাজাব
+আমার করুণ ডাকে কৃষ্ণসাগরের ঢেউ আছড়ে যাবে
+
+রাদা, আমি তোমাকে চাই
+তোমার মতো এক প্রেমিকা চাই</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>Dishevelled</h3>
+            <span class="wp-meta">Poem · English</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <div class="poem-en">Do not miss me
+When I'm not here.
+Do not repeatedly look into the endless dark night,
+Stars don't know light-year;
+
+Every time you smell the mud...
+Halt!
+Do not seek the surreal fragrance in the mundane.
+
+Gaze—
+O' Dear, gaze into the cliffs,
+Touch—
+O' Dear, touch the dishevelled fogs flying in the air.
+Hold—
+O' Dear, hold the smile once your beauty roared!
+
+I walk, and walk but never ever miss the talk,
+Tiny messy waves pondering my hearts
+And one day— I get old, cannot leave my couch
+
+Still I listen.
+I do—
+The unfettered storms breaking into your wounds,
+The unforgotten pains that shakes you soon,
+And
+The weeping stories you collect every noon...
+
+O' Dear,
+Do not miss me.
+I fly, I set high....</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✦ NEW POEM TEMPLATE — uncomment and fill in ✦
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>TITLE</h3>
+            <span class="wp-meta">কবিতা · DATE</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <div class="poem">LINE ONE
+LINE TWO
+
+STANZA TWO</div>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+
+      <!-- ═══ MonJaChay ═══ -->
+      <div class="wp-panel" id="panel-mon">
+        <p class="wp-section-desc">মনের কথা — essays, opinions, reflections.</p>
+
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>খিলাফাত ও আমার ভাবনা</h3>
+            <span class="wp-meta">প্রবন্ধ · ১৩ জানুয়ারি ২০২৬</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <div class="essay">
+                <p>ফেসবুকে স্ক্রল করলে চোখের সামনে যে পোস্টগুলো বার বার ঘুরেফিরে চলে আসে, তার একটা হলো 'খিলাফাত' নিয়ে আলাপ। একদল ডানপন্থী মানুসদের এই দাবি আর যুক্তি শুনে আমি বেশিরভাগ সময়ই বিরক্ত হয়ে পড়ি। বিরক্ত হবার কারণগুলোকে ডিসেকশনের টেবিলে রাখার আগে ক'টা প্রশ্নের উত্তর দেয়া জরুরি (বাঙালি ভীষণভাবে মিসইন্টারপ্রেট করে)!</p>
+                <p>আমি কি খিলাফাতের ধারণার বিরুদ্ধে অবস্থান নিই? উত্তর হলো— 'না'। আমার অবস্থান কি স্যেকুলার? আবারও উত্তর হচ্ছে— 'না'। আমার পলিটিক্যাল স্ট্যান্ডকে রাইটিস্ট বা লেফটিস্ট ট্যাগে ঝোলানো বেশ বোকামি হবে। আমাকে 'শাহবাগী' বা 'শিবির' ট্যাগিং করা মানুসগুলা আমার ব্যাপারে ফ্যালাসি রাখা বৈ কিছু করে না!</p>
+                <p>এবার খিলাফাতের আলাপে আসি। কেন আমার কাছে খিলাফাত নিয়ে হৈ হৈ রৈ রৈ বিষয়টা বিরক্তিকর...</p>
+                <p><strong>(১)</strong> একদল মানুস খিলাফাত প্রতিষ্ঠা করার কাজটাকে 'Top to Bottom' লেন্সে দেখে; তারা মনে করে আগে খিলাফাত আসবে, এরপর সমাজ ও ব্যক্তিজীবন রাতারাতি পাল্টে যাবে। আমার যৎসামান্য জ্ঞান ও যুক্তিবোধ বলে— এরকম ধারণা হলো নির্বুদ্ধিতা! আল্লাহর রাসুল সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম তো এই পথে এগোননি! উনি প্রথমে ঈমানের দাওয়াত দিয়েছেন, এরপর সত্য ও ন্যায়ের আহ্বানে অক্লান্ত মেহনত করেছেন। উনি 'Bottom to Top' লেন্সে গিয়েছিলেন। আমাদের ঈমান নিয়েই তো প্রথম গলদ।</p>
+                <p><strong>(২)</strong> খিলাফাত জয়যুক্ত হতে হলে উম্মাহর ঐক্য প্রতিষ্ঠিত হতে হবে। বড় জটিল কাজ হে সেলুকাস। আমরা ছোটো ছোটো ফিকহি ইস্যু নিয়েই আজও অনেক বেশি বিভক্ত। হাত কাঁধ পর্যন্ত নাকি কান পর্যন্ত উঠবে, তারাবির সালাত কত রাকআত— এসবের যেন ইয়ত্তা নাই। অথচ দুর্ভাগ্য! আমরা এই সামান্য ঐক্য নিয়ে সফলভাবে কাজ করতে পারি নাই, তবু খিলাফাতের বুলি সবার আগে আওড়াই!</p>
+                <p><strong>(৩)</strong> আমার মতে, মুসলিম উম্মাহ ইন্টেলেকচুয়াল লড়াইয়ের জন্য এখনো প্রস্তুত হয়নি। আমরা জ্ঞানের ভান্ডার বানাতে পারি নাই। আলেম আর নন-আলেম স্কলারদের একসাথে বসে কমপ্লেক্স এই জগতের হিসাব কুরআন-সুন্নাহ দিয়ে মেলানোর চেষ্টা চোখে পড়ে না বললেই চলে।</p>
+                <p><strong>(৪)</strong> খিলাফাত প্রতিষ্ঠা একটা দৃষ্টিকোণ থেকে সাংস্কৃতিক চ্যালেঞ্জও বটে। একসময় মুসলিম উম্মাহর সমৃদ্ধ সংস্কৃতি ও সাহিত্য ছিল, এখন এসব আলাপ শুধুই ধুলোপড়া অতীত। আমাদের চারপাশ ঢেকে রেখেছে পাশ্চাত্য সংস্কৃতি। কবিতা, উপন্যাস, গল্প, প্রবন্ধ, গান, উৎসব— সব জায়গায় তো পাশ্চাত্য আধিপত্যবাদ চলে।</p>
+                <p><strong>(৫)</strong> এবারে কথা আসে নিরাপত্তা নিয়ে। হিসেবটা সহজ— রাসুল সাল্লাল্লাহু আলাইহি ওয়া সাল্লামকে হিজরত করতে হয়েছে, ওনার দর্শনে ঈমান আনার জন্য সাহাবিদের কত নির্যাতন মেনে নিতে হয়েছে; তাহলে আমরা কেন এতো সহজে খিলাফাত প্রতিষ্ঠা চাই? আল্লাহ চাইলে খিলাফাত আসবে; কিন্তু আমার আপনার দায়িত্ব এখন ধাপে ধাপে নিজেদের পরিবর্তন করা।</p>
+                <p>এই হলো আমার আলাপ। যৌক্তিক সমালোচনাকে সাদরে অভ্যর্থনা জানাচ্ছি...</p>
+                <p class="byline">— শিহাব ইসলাম &nbsp;|&nbsp; ১৩ জানুয়ারি ২০২৬</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✦ NEW ESSAY TEMPLATE — uncomment and fill in ✦
+        <div class="wp-item">
+          <div class="wp-title" onclick="wpToggle(this)">
+            <h3>TITLE</h3>
+            <span class="wp-meta">প্রবন্ধ · DATE</span>
+            <span class="wp-arrow">▶</span>
+          </div>
+          <div class="wp-body">
+            <div class="wp-body-inner">
+              <div class="essay">
+                <p>PARAGRAPH</p>
+                <p class="byline">— NAME | DATE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+
+    </div><!-- /wp-content -->
+  </section><!-- /writings-section -->
+
+  <hr class="styled-line">
+
+  <!-- ══ ABOUT ══ -->
+  <div id="about" class="container">
+    <div class="ProfilePhotoWrapper">
+      <div class="ProfilePhoto">
+        <img src="profile_v2.jpg" alt="Shihab Islam">
+      </div>
+      <p class="picname">SHIHAB ISLAM<br>Adventurer of Life</p>
+    </div>
     <div class="about">
-    <h2><u>About Me</u></h2>
-    <p>
-      A generation was trained (i.e. forced) to chase conventional success and remain trapped in a money-driven matrix. While many compete relentlessly in a rat race, I chose a different struggle: to conquer myself. I fail often, but I persist.
-
-I have embarked on a path shaped by self-discovery, moral responsibility, and the pursuit of a life that ends with quiet satisfaction.
-<br>
-</p>
-    <p>
-My name is Shihab Islam. I am a XII-grade student at Notre Dame College, Dhaka. I was born in Dinajpur, spent my childhood across Panchagarh and Lalmonirhat, and completed my SSC in 2024. My journey then led me to Dhaka for college.
-<br>
-</p>
-    <p>
-I am deeply engaged in debating, literature, and travelling. Writing and teaching are not merely interests to me; they are ways of thinking and serving others. Through this website, I share my work to document the journey.
-<br>
-At present, I am shaping my life with one guiding aim: to leave a net positive impact on the planet.
-If Allah wills, I shall succeed ;)
-    </p>
-  </div>
-   </div>
-  
-  <!-- Articles Section -->
-   <hr class="styled-line">
-
-
-
-  <div class="writing">
-    <h2>WRITINGS</h2>
-    <div class="writing1">
-
-      <h3>I never named this one</h3>
-      <p>The moon goes up mirroring the sun's light in the dark;<br>
-Mist conceals surroundings- and keeps the secret a secret!<br>
-A bard gazes into the chasm of extraterrestrial vastness, <br>
-An explorer seeks the imperfection, the beauty of ever stretching cosmos;<br>
-The moon kisses her loneliness<br>
-The fog kisses the dispersed illumination of Luna;<br>
-And  a dimension of 'I' caresses thy in the abstract!
-</p>
-    </div>
-    <div class="writing2">
-      <h3>আমার একজন প্রেমিকা চাই</h3>
-      <p>
-রাদার মতো আমার একজন চাই<br>
-সে আমার প্রেমিকা হবে<br>
-মুক্ত বিহঙ্গ ও জিপসি রাদার চরিত্রে এসে অভিন্ন-<br>
-আমার সেই রাদা চাই!<br>
-
-সবুজের গালিচা গায়ে চাপিয়ে সে দাপিয়ে বেড়াবে<br>
-তার অসহ্য রূপে জ্বলে যাবে অশুচি<br>
-আমার সেই রাদা চাই<br>
-
-রাদা, তুমি হবে স্বাধীনচেতা; তুমি বলবে- <br>
-হাঁটু গেঁড়ে হাত ছুঁয়ে চুম্বন কর<br>
-তোমাকে আলিঙ্গন করার চেয়েও দামি হবে তোমার চেতনা জড়িয়ে ধরা<br>
-
-জানো, আমিও জোবারের মতো<br>
-দুরন্ত নির্ভীক ঘোড়সওয়ার লেইকো জোবার<br>
-তোমাকে পাবার তীব্র লোভে ভায়োলিন বাজাব<br>
-আমার করুণ ডাকে কৃষ্ণসাগরে ঢেউ আছড়ে যাবে<br>
-
-রাদা, আমি তোমাকে চাই<br>
-তোমার মতো এক প্রেমিকা চাই! </p>
+      <h2><u>About Me</u></h2>
+      <p>A generation was trained (i.e. forced) to chase conventional success and remain trapped in a money-driven matrix. While many compete relentlessly in a rat race, I chose a different struggle: to conquer myself. I fail often, but I persist. I have embarked on a path shaped by self-discovery, moral responsibility, and the pursuit of a life that ends with quiet satisfaction.</p>
+      <p>My name is Shihab Islam. I am a XII-grade student at Notre Dame College, Dhaka. I was born in Dinajpur, spent my childhood across Panchagarh and Lalmonirhat, and completed my SSC in 2024. My journey then led me to Dhaka for college.</p>
+      <p>I am deeply engaged in debating, literature, and travelling. Writing and teaching are not merely interests to me; they are ways of thinking and serving others. Through this website, I share my work to document the journey.<br>At present, I am shaping my life with one guiding aim: to leave a net positive impact on the planet. If Allah wills, I shall succeed ;)</p>
     </div>
   </div>
 
+  <!-- ══ FOOTER ══ -->
   <footer class="site-footer">
-  <p>© 2025 Shihab Islam. All rights reserved.</p>
-  <p><a href="mailto:declined2stay2flyweirdo@gmail.com">Mail</a></p>
-</footer>
+    <p>© 2025 Shihab Islam. All rights reserved.</p>
+    <p><a href="mailto:declined2stay2flyweirdo@gmail.com">Mail</a></p>
+  </footer>
+
+  <script>
+    function showTab(name, btn) {
+      document.querySelectorAll('.wp-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.wp-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('panel-' + name).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function wpToggle(titleEl) {
+      const item = titleEl.closest('.wp-item');
+      const body = item.querySelector('.wp-body');
+      const isOpen = item.classList.contains('open');
+
+      item.closest('.wp-panel').querySelectorAll('.wp-item.open').forEach(o => {
+        o.classList.remove('open');
+        o.querySelector('.wp-body').classList.remove('open');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        body.classList.add('open');
+      }
+    }
+  </script>
 
 </body>
 </html>
-
